@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Hardhat Local",
+    "chain": "ETH",
+    "network": "hardhat",
+    "rpc": ["http://localhost:8545"],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://hardhat.org/hardhat-network/",
+    "shortName": "eth",
+    "chainId": 31337,
+    "networkId": 31337,
+    "ens": {
+      "registry": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    }
+  },
+  {
+    "name": "Ethereum Mainnet",
+    "chain": "ETH",
+    "network": "mainnet",
+    "icon": "ethereum",
+    "rpc": [
+      "https://mainnet.infura.io/v3/${INFURA_API_KEY}",
+      "wss://mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
+      "https://api.mycryptoapi.com/eth",
+      "https://cloudflare-eth.com"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://ethereum.org",
+    "shortName": "eth",
+    "chainId": 1,
+    "networkId": 1,
+    "slip44": 60,
+    "ens": {
+      "registry": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    },
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Ethereum Testnet Ropsten",
+    "chain": "ETH",
+    "network": "ropsten",
+    "rpc": [
+      "https://ropsten.infura.io/v3/${INFURA_API_KEY}",
+      "wss://ropsten.infura.io/ws/v3/${INFURA_API_KEY}"
+    ],
+    "faucets": ["https://faucet.ropsten.be?${ADDRESS}"],
+    "nativeCurrency": {
+      "name": "Ropsten Ether",
+      "symbol": "ROP",
+      "decimals": 18
+    },
+    "infoURL": "https://github.com/ethereum/ropsten",
+    "shortName": "rop",
+    "chainId": 3,
+    "networkId": 3,
+    "ens": {
+      "registry": "0x112234455c3a32fd11230c42e7bccd4a84e02010"
+    },
+    "explorers": [
+      {
+        "name": "etherscan-ropsten",
+        "url": "https://ropsten.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Ethereum Testnet Rinkeby",
+    "chain": "ETH",
+    "network": "rinkeby",
+    "rpc": [
+      "https://rinkeby.infura.io/v3/${INFURA_API_KEY}",
+      "wss://rinkeby.infura.io/ws/v3/${INFURA_API_KEY}"
+    ],
+    "faucets": ["https://faucet.rinkeby.io"],
+    "nativeCurrency": {
+      "name": "Rinkeby Ether",
+      "symbol": "RIN",
+      "decimals": 18
+    },
+    "infoURL": "https://www.rinkeby.io",
+    "shortName": "rin",
+    "chainId": 4,
+    "networkId": 4,
+    "ens": {
+      "registry": "0xe7410170f87102df0055eb195163a03b7f2bff4a"
+    },
+    "explorers": [
+      {
+        "name": "etherscan-rinkeby",
+        "url": "https://rinkeby.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Ethereum Testnet Görli",
+    "chain": "ETH",
+    "network": "goerli",
+    "rpc": [
+      "https://rpc.goerli.mudit.blog/",
+      "https://rpc.slock.it/goerli ",
+      "https://goerli.prylabs.net/"
+    ],
+    "faucets": [
+      "https://goerli-faucet.slock.it/?address=${ADDRESS}",
+      "https://faucet.goerli.mudit.blog"
+    ],
+    "nativeCurrency": {
+      "name": "Görli Ether",
+      "symbol": "GOR",
+      "decimals": 18
+    },
+    "infoURL": "https://goerli.net/#about",
+    "shortName": "gor",
+    "chainId": 5,
+    "networkId": 5,
+    "ens": {
+      "registry": "0x112234455c3a32fd11230c42e7bccd4a84e02010"
+    },
+    "explorers": [
+      {
+        "name": "etherscan-goerli",
+        "url": "https://goerli.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Ethereum Testnet Kovan",
+    "chain": "ETH",
+    "network": "kovan",
+    "rpc": [
+      "https://kovan.poa.network",
+      "http://kovan.poa.network:8545",
+      "https://kovan.infura.io/v3/${INFURA_API_KEY}",
+      "wss://kovan.infura.io/ws/v3/${INFURA_API_KEY}",
+      "ws://kovan.poa.network:8546"
+    ],
+    "faucets": [
+      "https://faucet.kovan.network",
+      "https://gitter.im/kovan-testnet/faucet"
+    ],
+    "nativeCurrency": {
+      "name": "Kovan Ether",
+      "symbol": "KOV",
+      "decimals": 18
+    },
+    "infoURL": "https://kovan-testnet.github.io/website",
+    "shortName": "kov",
+    "chainId": 42,
+    "networkId": 42,
+    "explorers": [
+      {
+        "name": "etherscan-kovan",
+        "url": "https://kovan.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Binance Smart Chain Mainnet",
+    "chain": "BSC",
+    "network": "mainnet",
+    "rpc": [
+      "https://bsc-dataseed1.binance.org",
+      "https://bsc-dataseed2.binance.org",
+      "https://bsc-dataseed3.binance.org",
+      "https://bsc-dataseed4.binance.org",
+      "https://bsc-dataseed1.defibit.io",
+      "https://bsc-dataseed2.defibit.io",
+      "https://bsc-dataseed3.defibit.io",
+      "https://bsc-dataseed4.defibit.io",
+      "https://bsc-dataseed1.ninicoin.io",
+      "https://bsc-dataseed2.ninicoin.io",
+      "https://bsc-dataseed3.ninicoin.io",
+      "https://bsc-dataseed4.ninicoin.io",
+      "wss://bsc-ws-node.nariox.org"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Binance Chain Native Token",
+      "symbol": "BNB",
+      "decimals": 18
+    },
+    "infoURL": "https://www.binance.org",
+    "shortName": "bnb",
+    "chainId": 56,
+    "networkId": 56,
+    "explorers": [
+      {
+        "name": "bscscan",
+        "url": "https://bscscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Binance Smart Chain Testnet",
+    "chain": "BSC",
+    "network": "Chapel",
+    "rpc": [
+      "https://data-seed-prebsc-1-s1.binance.org:8545",
+      "https://data-seed-prebsc-2-s1.binance.org:8545",
+      "https://data-seed-prebsc-1-s2.binance.org:8545",
+      "https://data-seed-prebsc-2-s2.binance.org:8545",
+      "https://data-seed-prebsc-1-s3.binance.org:8545",
+      "https://data-seed-prebsc-2-s3.binance.org:8545"
+    ],
+    "faucets": ["https://testnet.binance.org/faucet-smart"],
+    "nativeCurrency": {
+      "name": "Binance Chain Native Token",
+      "symbol": "tBNB",
+      "decimals": 18
+    },
+    "infoURL": "https://testnet.binance.org/",
+    "shortName": "bnbt",
+    "chainId": 97,
+    "networkId": 97,
+    "explorers": [
+      {
+        "name": "bscscan-testnet",
+        "url": "https://testnet.bscscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Matic(Polygon) Mainnet",
+    "chain": "Matic",
+    "network": "mainnet",
+    "rpc": [
+      "https://rpc-mainnet.maticvigil.com",
+      "https://rpc-mainnet.matic.network",
+      "wss://ws-mainnet.matic.network",
+      "https://rpc-mainnet.matic.quiknode.pro",
+      "https://matic-mainnet.chainstacklabs.com"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Matic",
+      "symbol": "MATIC",
+      "decimals": 18
+    },
+    "infoURL": "https://matic.network/",
+    "shortName": "matic",
+    "chainId": 137,
+    "networkId": 137,
+    "explorers": [
+      {
+        "name": "polygonscan",
+        "url": "https://polygonscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Matic Testnet Mumbai",
+    "chain": "Matic",
+    "network": "testnet",
+    "rpc": ["https://rpc-mumbai.maticvigil.com", "wss://ws-mumbai.matic.today"],
+    "faucets": ["https://faucet.matic.network/"],
+    "nativeCurrency": {
+      "name": "Matic",
+      "symbol": "tMATIC",
+      "decimals": 18
+    },
+    "infoURL": "https://matic.network/",
+    "shortName": "maticmum",
+    "chainId": 80001,
+    "networkId": 80001,
+    "explorers": [
+      {
+        "name": "polygonscan-mumbai",
+        "url": "https://mumbai.polygonscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  }
+]

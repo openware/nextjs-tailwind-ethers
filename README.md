@@ -10,6 +10,21 @@ npm run dev
 yarn dev
 ```
 
+## Application structure
+
+```
+- assets/images     # Local images using for next/image optimization.
+- components        # Contain React components.
+- configs/app.ts    # Application configuration. e.g. app name, supported chains.
+- configs/chains.json # List of known chains.
+- contexts          # Contain React contexts.
+- contracts         # Contain Smart Contract related. e.g. ABI json.
+- hooks             # Contain React hooks.
+- pages             # Contain application pages.
+- public            # Public assets that can be loaded from the client side.
+- styles            # Application styles/css
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
