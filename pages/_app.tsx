@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
         <title>{appTitle()}</title>
       </Head>
       <Web3ReactProvider getLibrary={getLibrary}>

@@ -70,7 +70,7 @@ export default function Account({
       <Connector
         Label={() => (
           <>
-            <span className="inline md:hidden lg:inline">
+            <span className="md:hidden lg:inline">
               Connect your wallet
             </span>
             <span className="hidden md:inline lg:hidden">

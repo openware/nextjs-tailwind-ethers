@@ -16,7 +16,7 @@ export default function NavBottomBar({ setSidebarOpen }: Props): JSX.Element {
   const isActivePath = (path: string) => router.pathname === path
 
   return (
-    <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-t border-gray-200">
+    <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-t border-b border-gray-200">
       <div className="flex-1 flex justify-between">
         <nav className="flex-1 flex flex-row bg-white">
           {navs.map((item) => (
