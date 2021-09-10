@@ -11,6 +11,7 @@ import chains from '../configs/chains'
 import useWallet from '../hooks/useWallet'
 import { appTitle } from '../libs/page'
 import { shortenHex } from '../libs/utils'
+import { SharedLayout } from '../components/SharedLayout'
 
 export default function Home(): JSX.Element {
   const { active, account, chain, connectorInfo } = useWallet()
@@ -62,7 +63,7 @@ export default function Home(): JSX.Element {
         <title>{appTitle('Home')}</title>
       </Head>
       {!active ? (
-        <Layout className="flex flex-grow">
+        <SharedLayout>
           <div className="flex flex-1 items-center justify-center">
             <div className="text-center">
               <svg
@@ -105,9 +106,9 @@ export default function Home(): JSX.Element {
               </div>
             </div>
           </div>
-        </Layout>
+        </SharedLayout>
       ) : (
-        <Layout>
+        <SharedLayout>
           <div className="bg-white shadow">
             <div className="px-4 sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
               <div className="py-6 md:flex md:items-center md:justify-between">
@@ -256,7 +257,7 @@ export default function Home(): JSX.Element {
               </div>
             </div>
           </div>
-        </Layout>
+        </SharedLayout>
       )}
     </>
   )
