@@ -25,7 +25,7 @@ export default function Connector({
     <>
       <button
         type="button"
-        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-cta-color-main hover:bg-primary-cta-color-hover"
         onClick={() => setModal(true)}
       >
         <Label />

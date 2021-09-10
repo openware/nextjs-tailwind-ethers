@@ -17,14 +17,78 @@ export default {
       mobile: true,
     },
   ],
-  community: [
-    { name: 'About', href: 'https://www.openware.com/company/about-us' },
-    { name: 'Blog', href: 'https://www.openware.com/blog' },
-    { name: 'Careers', href: 'https://www.openware.com/company/careers' },
-    { name: 'Contact', href: 'https://www.openware.com/contact' },
+  footer: [
     {
-      name: 'Partners',
-      href: 'https://www.openware.com/company/become-a-partner',
+      name: 'About us',
+      submenu: [
+        {
+          name: 'Terms',
+          href: 'https://www.yellow.com/terms-of-service',
+          target: '_self',
+        },
+        { name: 'Privacy', href: 'https://www.yellow.com//privacy-policy' },
+        {
+          name: 'Carrers',
+          href: 'https://www.yellowincubator.com/get-in-touch',
+          target: '_blank',
+        },
+        {
+          name: 'Support',
+          href: 'https://support.yellow.com',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      name: 'Accelerator',
+      submenu: [
+        {
+          name: 'Incubator',
+          href: 'https://www.yellowincubator.com/',
+          target: '_blank',
+        },
+        {
+          name: 'Coworking',
+          href: 'https://www.yellowcoworking.com',
+          target: '_blank',
+        },
+        {
+          name: 'Foundation',
+          href: 'https://www.yellowincubator.com/foundations',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      name: 'Finance',
+      submenu: [
+        {
+          name: 'Register Your Token',
+          href: 'https://yellow.com/tokens',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      name: 'Trade',
+      submenu: [
+        { name: 'Exchange', href: 'https://trade.yellow-v2.opendax.app' },
+        {
+          name: 'Market Making',
+          href: 'https://www.yellow.com//promote/market_making',
+        },
+        { name: 'Fee Schedule', href: 'https://www.yellow.com/fee' },
+        {
+          name: 'Trading API',
+          href: 'htthttps://yellowglobal.zendesk.com/hc/en-us/articles/360048012553-API-Document',
+          target: 'blank',
+        },
+        {
+          name: 'FAQ',
+          href: 'https://yellowglobal.zendesk.com/hc/en-us/sections/360008152993-FAQ',
+          target: 'blank',
+        },
+      ],
     },
   ],
   social: [

@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 First, generate your application:
+
 ```bash
 npx create-next-app --use-npm -e https://github.com/openware/nextjs-tailwind-ethers my-crypto-app
 ```
