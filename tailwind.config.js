@@ -1,13 +1,12 @@
 
 module.exports = {
-  // FIXME: merge from react-opendax
   mode: 'jit',
   purge: {
     content: [
-        './components/**/*.{ts,tsx}',
-        './pages/**/*.{ts,tsx}',
-        './pages/*.{ts,tsx}',
-        './node_modules/@openware/react-opendax/**/*.js'
+      './components/**/*.{ts,tsx}',
+      './pages/**/*.{ts,tsx}',
+      './pages/*.{ts,tsx}',
+      './node_modules/@openware/react-opendax/**/*.js'
     ],
   },
   darkMode: false, // or 'media' or 'class'

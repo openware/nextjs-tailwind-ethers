@@ -44,7 +44,9 @@ const footerProps: FooterProps = {
 
 const sidebarProps: SidebarProps = {
   navigations,
-  activePathColor: 'text-gray-900',
+  navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
+  navActiveClassNames: 'text-gray-900 bg-gray-100',
+  navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
 }
 
 export default function Layout(
