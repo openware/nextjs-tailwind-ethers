@@ -1,7 +1,7 @@
 
 module.exports = {
   // FIXME: merge from react-opendax
-  mode: 'classic',
+  mode: 'jit',
   purge: {
     content: [
         './components/**/*.{ts,tsx}',
