@@ -6,15 +6,11 @@ export default {
       name: 'Home',
       href: '/',
       icon: HomeIcon,
-      sidebar: true,
-      mobile: true,
     },
     {
       name: 'Smart Contract',
       href: '/smart-contract',
       icon: ClipboardListIcon,
-      sidebar: true,
-      mobile: true,
     },
   ],
   footer: [

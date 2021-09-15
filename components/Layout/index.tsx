@@ -1,24 +1,25 @@
 import type {
   FooterProps,
   navigationApp,
+  navigationAppItem,
   SidebarProps,
 } from '@openware/react-opendax'
 import { Layout as SharedLayout } from '@openware/react-opendax'
 import type { PropsWithChildren } from 'react'
 import Navigation from '../../configs/navigation'
 
-export const navigations: navigationApp[] = Navigation.main.map<navigationApp>(
-  (nav) => ({
-    app: nav.name,
-    pathnames: [
+export const navigations: navigationApp[] = [
+  {
+    app: "mainapp",
+    pathnames: Navigation.main.map<navigationAppItem>(nav => (
       {
         name: nav.name,
         icon: <nav.icon className="text-gray-500 flex-shrink-0 h-6 w-6" />,
         path: nav.href,
-      },
-    ],
-  }),
-)
+      }
+    ))
+  },
+];
 
 const footerProps: FooterProps = {
   className: 'bg-white',
@@ -43,6 +44,7 @@ const footerProps: FooterProps = {
 }
 
 const sidebarProps: SidebarProps = {
+  currentApp: 'mainapp',
   navigations,
   navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
   navActiveClassNames: 'text-gray-900 bg-gray-100',
