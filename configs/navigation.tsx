@@ -1,4 +1,8 @@
 import { ClipboardListIcon, HomeIcon } from '@heroicons/react/outline'
+import React from 'react'
+import { LoginButton } from '@openware/react-opendax'
+import Connector from '../components/Connector'
+import Account from '../components/Account'
 
 export default {
   main: [

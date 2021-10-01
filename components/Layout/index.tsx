@@ -5,8 +5,10 @@ import type {
   SidebarProps,
 } from '@openware/react-opendax'
 import { Layout as SharedLayout } from '@openware/react-opendax'
-import type { PropsWithChildren } from 'react'
+import { PropsWithChildren, useCallback } from 'react'
 import Navigation from '../../configs/navigation'
+import useDApp, { ProviderWhitelist } from '../../hooks/useDApp';
+import useWallet from '../../hooks/useWallet';
 
 export const navigations: navigationApp[] = [
   {
@@ -43,12 +45,38 @@ const footerProps: FooterProps = {
   },
 }
 
-const sidebarProps: SidebarProps = {
-  currentApp: 'mainapp',
-  navigations,
-  navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
-  navActiveClassNames: 'text-gray-900 bg-gray-100',
-  navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+function sidebarProps(): SidebarProps {
+  const { connectWithProvider } = useDApp()
+  const { active } = useWallet()
+  const handleConnectWallet = useCallback(
+    (provider: ProviderWhitelist) => {
+      connectWithProvider(provider).catch(console.error)
+    },
+    [connectWithProvider],
+  );
+
+  // const userMenu = [
+  //   {
+  //     icon: DEFAULT_CONNECT[0].icon,
+  //     label: 'Metamask',
+  //     onClick: () => handleConnectWallet('Injected'),
+  //   },
+  //   {
+  //     icon: DEFAULT_CONNECT[1].icon,
+  //     label: 'WalletConnect',
+  //     onClick: () => handleConnectWallet('WalletConnect'),
+  //   }
+  // ]
+
+  return {
+      currentApp: 'mainapp',
+      navigations,
+      navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
+      navActiveClassNames: 'text-gray-900 bg-gray-100',
+      navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+      isLoggedin: false,
+      isMetamaskConnected: active,
+  }
 }
 
 export default function Layout(
@@ -58,7 +86,7 @@ export default function Layout(
     <SharedLayout
       containerClassName={props.className}
       footerProps={footerProps}
-      sidebarProps={sidebarProps}
+      sidebarProps={sidebarProps()}
     >
       {props.children}
     </SharedLayout>

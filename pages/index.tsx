@@ -4,6 +4,7 @@ import { ethers } from 'ethers'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useMemo, useState } from 'react'
+import Account from '../components/Account'
 import Connector from '../components/Connector'
 import ExplorerLink from '../components/ExplorerLink'
 import Layout from '../components/Layout'
@@ -103,6 +104,8 @@ export default function Home(): JSX.Element {
               <div className="mt-6">
                 <Connector />
               </div>
+
+              <Account />
             </div>
           </div>
         </Layout>
