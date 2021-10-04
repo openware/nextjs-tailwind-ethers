@@ -5,10 +5,8 @@ import type {
   SidebarProps,
 } from '@openware/react-opendax'
 import { Layout as SharedLayout } from '@openware/react-opendax'
-import { PropsWithChildren, useCallback } from 'react'
+import { PropsWithChildren } from 'react'
 import Navigation from '../../configs/navigation'
-import useDApp, { ProviderWhitelist } from '../../hooks/useDApp';
-import useWallet from '../../hooks/useWallet';
 
 export const navigations: navigationApp[] = [
   {
@@ -46,28 +44,6 @@ const footerProps: FooterProps = {
 }
 
 function sidebarProps(): SidebarProps {
-  const { connectWithProvider } = useDApp()
-  const { active } = useWallet()
-  const handleConnectWallet = useCallback(
-    (provider: ProviderWhitelist) => {
-      connectWithProvider(provider).catch(console.error)
-    },
-    [connectWithProvider],
-  );
-
-  // const userMenu = [
-  //   {
-  //     icon: DEFAULT_CONNECT[0].icon,
-  //     label: 'Metamask',
-  //     onClick: () => handleConnectWallet('Injected'),
-  //   },
-  //   {
-  //     icon: DEFAULT_CONNECT[1].icon,
-  //     label: 'WalletConnect',
-  //     onClick: () => handleConnectWallet('WalletConnect'),
-  //   }
-  // ]
-
   return {
       currentApp: 'mainapp',
       navigations,
@@ -75,7 +51,7 @@ function sidebarProps(): SidebarProps {
       navActiveClassNames: 'text-gray-900 bg-gray-100',
       navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
       isLoggedin: false,
-      isMetamaskConnected: active,
+      buttonsList: [ { name: 'Metamask' }],
   }
 }
 

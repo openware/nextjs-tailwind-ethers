@@ -3,13 +3,11 @@ import classNames from 'classnames'
 import { ethers } from 'ethers'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect, useMemo, useState } from 'react'
-import Account from '../components/Account'
-import Connector from '../components/Connector'
-import ExplorerLink from '../components/ExplorerLink'
+import React, { useEffect, useMemo, useState } from 'react'
+import { Connector, ExplorerLink } from '@openware/react-opendax'
+import useWallet from '../hooks/useWallet'
 import Layout from '../components/Layout'
 import chains from '../configs/chains'
-import useWallet from '../hooks/useWallet'
 import { appTitle } from '../libs/page'
 import { shortenHex } from '../libs/utils'
 
@@ -104,8 +102,6 @@ export default function Home(): JSX.Element {
               <div className="mt-6">
                 <Connector />
               </div>
-
-              <Account />
             </div>
           </div>
         </Layout>

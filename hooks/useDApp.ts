@@ -65,7 +65,7 @@ export const getConnectorInfo = (
     case InjectedConnector:
       return {
         id: 'Injected',
-        name: window.ethereum?.isMetaMask ? 'MetaMask' : 'Injected',
+        name: (window as any).ethereum?.isMetaMask ? 'MetaMask' : 'Injected',
       }
     case WalletConnectConnector:
       return {
