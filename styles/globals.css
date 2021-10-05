@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --tw-bg-opacity: 1; /* FIXME: include from react-opendax */
+}
+
+body {
+  background-color: rgba(
+    243,
+    244,
+    246,
+    1
+  ); /* FIXME: should be an option in shared layout */
+}
