@@ -5,7 +5,7 @@ import type {
   SidebarProps,
 } from '@openware/react-opendax'
 import { Layout as SharedLayout } from '@openware/react-opendax'
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 import Navigation from '../../configs/navigation'
 
 export const navigations: navigationApp[] = [
@@ -43,16 +43,14 @@ const footerProps: FooterProps = {
   },
 }
 
-function sidebarProps(): SidebarProps {
-  return {
-      currentApp: 'mainapp',
-      navigations,
-      navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
-      navActiveClassNames: 'text-gray-900 bg-gray-100',
-      navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-      isLoggedin: false,
-      buttonsList: [ { name: 'Metamask' }],
-  }
+const sidebarProps: SidebarProps = {
+  currentApp: 'mainapp',
+  navigations,
+  navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
+  navActiveClassNames: 'text-gray-900 bg-gray-100',
+  navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+  isLoggedin: false,
+  buttonsList: [ { name: 'Metamask' }],
 }
 
 export default function Layout(
@@ -62,7 +60,7 @@ export default function Layout(
     <SharedLayout
       containerClassName={props.className}
       footerProps={footerProps}
-      sidebarProps={sidebarProps()}
+      sidebarProps={sidebarProps}
     >
       {props.children}
     </SharedLayout>

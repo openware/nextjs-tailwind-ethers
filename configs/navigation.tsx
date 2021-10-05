@@ -1,5 +1,4 @@
 import { ClipboardListIcon, HomeIcon } from '@heroicons/react/outline'
-import React from 'react'
 
 export default {
   main: [
