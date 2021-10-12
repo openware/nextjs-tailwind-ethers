@@ -77,7 +77,7 @@ export const getConnectorInfo = (
   }
 }
 
-export default function useDApp() {
+export function useDApp() {
   const context = useWeb3React<ethers.providers.Web3Provider>()
   const { account, activate, connector, error, chainId, library, deactivate } =
     context

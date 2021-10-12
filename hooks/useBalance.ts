@@ -2,7 +2,7 @@ import type { ethers } from 'ethers'
 import { BigNumber } from 'ethers'
 import { useEffect, useState } from 'react'
 import useSWR from 'swr'
-import useBlockNumber from './useBlockNumber'
+import { useBlockNumber} from './useBlockNumber'
 
 export async function getBalance(
   _: string,
@@ -13,7 +13,7 @@ export async function getBalance(
   return provider.getBalance(address)
 }
 
-export default function useBalance(
+export function useBalance(
   provider: ethers.providers.Web3Provider,
   address: string,
 ) {

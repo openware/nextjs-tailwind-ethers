@@ -1,7 +1,6 @@
-import useBalance from './useBalance'
-import useDApp from './useDApp'
+import { useBalance, useDApp } from './'
 
-export default function useWallet() {
+export function useWallet() {
   const {
     context: { active, account, library, connector },
     connectorInfo,

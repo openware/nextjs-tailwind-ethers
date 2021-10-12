@@ -1,7 +1,7 @@
 import { ethers } from 'ethers'
 import { useMemo } from 'react'
 
-export default function useContract<T extends ethers.Contract>(
+export function useContract<T extends ethers.Contract>(
   address: string | undefined,
   abi: ethers.ContractInterface,
   signerOrProvider?: ethers.Signer | ethers.providers.Provider | undefined,
