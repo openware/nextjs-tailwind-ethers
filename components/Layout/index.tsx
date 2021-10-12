@@ -5,7 +5,8 @@ import type {
   SidebarProps,
 } from '@openware/react-opendax'
 import { Layout as SharedLayout } from '@openware/react-opendax'
-import type { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, useState } from 'react'
+import { Account } from '..';
 import Navigation from '../../configs/navigation'
 
 export const navigations: navigationApp[] = [
@@ -43,19 +44,24 @@ const footerProps: FooterProps = {
   },
 }
 
-const sidebarProps: SidebarProps = {
-  currentApp: 'mainapp',
-  navigations,
-  navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
-  navActiveClassNames: 'text-gray-900 bg-gray-100',
-  navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-  isLoggedin: false,
-  buttonsList: [ { name: 'Metamask' }],
-}
-
 export default function Layout(
   props: PropsWithChildren<{ className?: string }>,
 ): JSX.Element {
+  const [collapseLeftBar, setCollapseLeftBar] = useState<boolean>(false);
+
+  const sidebarProps: SidebarProps = {
+    currentApp: 'mainapp',
+    navigations,
+    navClassNames: 'no-underline duration-200 group flex items-center px-2 py-2 text-sm font-medium rounded-md text-cta-contrast',
+    navActiveClassNames: 'text-gray-900 bg-gray-100',
+    navInactiveClassNames: 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+    isLoggedin: false,
+    buttonsList: [ { name: 'Metamask', component: <Account collapseLeftBar={collapseLeftBar} /> }],
+    onSidebarCollapse:  (collapseLeftBar: boolean | ((prevState: boolean) => boolean)) => {
+        setCollapseLeftBar(collapseLeftBar);
+    },
+  }
+
   return (
     <SharedLayout
       containerClassName={props.className}
